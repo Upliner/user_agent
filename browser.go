@@ -81,6 +81,9 @@ func (p *UserAgent) detectBrowser(sections []section) {
 						case "Electron":
 							p.browser.Name = "Electron"
 							p.browser.Version = sections[slen-2].version
+						case "UBrowser":
+							p.browser.Name = "UBrowser"
+							p.browser.Version = sections[slen-2].version
 						default:
 							switch sections[sectionIndex].name {
 							case "Chrome", "CriOS":
